@@ -8,6 +8,10 @@
         h1, h2, h3 {
     font-family: 'Chango', cursive;
 }
+
+body, p, a, li, input, textarea, button {
+    font-family: 'Montserrat', sans-serif;
+}
 a {
     color: inherit;       /* match text color */
     text-decoration: underline;
@@ -331,6 +335,7 @@ a:hover {
     max-width: 1200px;  /* same as About Me section */
     margin: 0 auto;     /* centers content */
 }
+
 
 
     </style>
