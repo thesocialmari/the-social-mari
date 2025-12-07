@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Social Mari</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Chango&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+        <div class="logo">The Social Mari</div>
+
+    <nav class="nav-links"> 
+   	<a href="index.html">Home</a> 
+    	<a href="photography.html">Photography</a> 
+    	<a href="about.html">About</a> 
+    </nav>
+
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1>Mari-Liis Sepaste</h1>
+        <p>
+            Photography and Social Media Marketing<br>
+            in Orihuela Costa, Spain
+        </p>
+    </section>
+
+   <div class="slider">
+    <button id="scroll-left" class="scroll-btn">❮</button>
+
+    <div class="slides" id="slides">
+        <div class="slide"><img src="images/Food-and-Drinks/IMG_2195.jpg" alt=""></div>
+        <div class="slide"><img src="images/Food-and-Drinks/IMG_2054.jpg" alt=""></div>
+        <div class="slide"><img src="images/Events/IMG_2583.jpg" alt=""></div>
+        <div class="slide"><img src="images/Events/IMG_2587.jpg" alt=""></div>
+        <div class="slide"><img src="images/Events/IMG_2443.jpg" alt=""></div>
+        <div class="slide"><img src="images/Food-and-Drinks/IMG_2169.jpg" alt=""></div>
+        <div class="slide"><img src="images/Food-and-Drinks/IMG_1998.jpg" alt=""></div>
+        <div class="slide"><img src="images/Events/IMG_2829.jpg" alt=""></div>
+        <div class="slide"><img src="images/Events/IMG_3250.jpg" alt=""></div>
+    </div>
+
+    <button id="scroll-right" class="scroll-btn">❯</button>
+</div>
+
+<script>
+const slides = document.getElementById("slides");
+const leftBtn = document.getElementById("scroll-left");
+const rightBtn = document.getElementById("scroll-right");
+
+// Scroll by one image width
+const scrollAmount = 420; // 400px image + 20px gap
+
+leftBtn.onclick = () => {
+    slides.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+};
+
+rightBtn.onclick = () => {
+    slides.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+};
+</script>
+
+
+
+    <section class="about-section">
+        <div class="about-left">
+            <h2>About Me</h2>
+    </section>
+
+    <section class="about-section">
+        <div class="about-left">
+            <img src="images/IMG_1056.jpg" alt="Your photo">
+        </div>
+
+        <div class="about-right">
+            <p>
+                
+Hi! I’m Mari-Liis, a freelance photographer and social media manager. I’m originally from Tallinn, Estonia, and have been living in Orihuela Costa, Spain since 2023.
+</p>
+<p>
+I specialize in food and product photography, but I also enjoy capturing portraits and candid moments.
+</p>
+<p>
+With a strong background in corporate sales and marketing, I help local businesses manage their social media accounts and showcase their brand online.
+</p>
+<p><a href="about.html">Read more about me</a>
+            </p>
+        </div>
+    </section>
+
+    <section class="fullwidth-image">
+        <img src="images/IMG_8492_01.jpg" alt="Full width photo">
+    </section>
+
+    <section class="contact-section">
+    <div class="section-container">
+        <h2>Contact Me</h2>
+
+        <form action="https://formspree.io/f/xvgeqjez" method="POST">
+            <label>Your Name*</label>
+            <input type="text" name="name" required>
+
+            <label>Your Email*</label>
+            <input type="email" name="email" required>
+
+            <label>Message*</label>
+            <textarea name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
+
+
+<footer class="site-footer">
+      <div class="section-container">
+    <p><a href="mailto:thesocialmari@gmail.com">thesocialmari@gmail.com</a></p>
+    <p>© 2025 Mari-Liis Sepaste. All rights reserved.</p>
+    </div>
+</footer>
+
+
+</body>
+
+</html>

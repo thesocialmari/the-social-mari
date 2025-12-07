@@ -1,0 +1,336 @@
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: #f9faf8;
+            color: #023040;
+        }
+        h1, h2, h3 {
+    font-family: 'Chango', cursive;
+}
+a {
+    color: inherit;       /* match text color */
+    text-decoration: underline;
+    transition: color 0.3s; /* smooth hover transition */
+}
+
+/* Hover: change color */
+a:hover {
+    color: #026283; /* choose any color you like */
+}
+
+.section-spacing {
+    margin: 60px 0;   /* adjust to your taste (40–80 is common) */
+}
+
+        /* --- NAVIGATION BAR --- */
+        .navbar {
+            width: 100%;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 600;
+            color: #014b63;
+        }
+
+        .nav-links a {
+            margin-left: 30px;
+            text-decoration: none;
+            font-size: 16px;
+            color: #014b63;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-family: 'Chango', cursive;
+            font-size: 70px;
+            font-weight: 400;
+            margin: 0;
+            color: #014b63;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #014b63;
+            line-height: 1.4;
+        }
+
+        /* Make mobile friendly */
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 46px;
+            }
+
+            .nav-links a {
+                margin-left: 15px;
+            }
+        }
+
+       /* --- HORIZONTAL GALLERY --- */
+
+.slider {
+    position: relative;
+    width: 100%;
+    padding: 40px 60px; /* padding on the sides */
+    box-sizing: border-box;
+}
+
+.slides {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+}
+
+.slides::-webkit-scrollbar {
+    height: 10px;
+}
+
+.slides::-webkit-scrollbar-thumb {
+    background: #014b63;
+    border-radius: 10px;
+}
+
+/* Each image is 400x400 square */
+.slide {
+    width: 400px;
+    height: 400px;
+    flex: 0 0 auto;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+/* Scroll buttons */
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #014b63;
+    color: white;
+    border: none;
+    font-size: 32px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-btn:hover {
+    background: #026283;
+}
+
+#scroll-left {
+    left: 10px;
+}
+
+#scroll-right {
+    right: 10px;
+}
+
+
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 30px;
+            background: rgba(0, 0, 0, 0.3);
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .prev:hover,
+        .next:hover {
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        /* Dots */
+        .dots {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .dots span {
+            height: 12px;
+            width: 12px;
+            background: #bbb;
+            display: inline-block;
+            border-radius: 50%;
+            margin: 4px;
+            cursor: pointer;
+        }
+
+        .dots .active {
+            background: #014b63;
+        }
+
+        .about-section {
+            display: flex;
+            gap: 40px;
+            width: 90%;
+            max-width: 1200px;
+            margin: 25px auto;
+            align-items: flex-start;
+        }
+
+        .about-left h2 {
+            font-family: 'Chango', cursive;
+            font-size: 48px;
+            margin-bottom: 10px;
+            color: #014b63;
+        }
+
+        .about-left img {
+            height: 400px;
+            width: 400px;
+            border-radius: 16px;
+            margin-top: 10px;
+        }
+
+        .about-right {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #014b63;
+        }
+
+        /* Responsive */
+        @media (max-width: 800px) {
+            .about-section {
+                flex-direction: column;
+                text-align: left;
+            }
+
+            .about-left img {
+                margin: 0 auto;
+            }
+        }
+
+        .fullwidth-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px 0;
+        }
+
+       .contact-section {
+    width: 100%;            /* full width */
+    padding: 30px 0;        /* vertical spacing */
+    text-align: left;       
+    box-sizing: border-box;
+}
+
+        .contact-section h2 {
+            font-family: 'Chango', cursive;
+            font-size: 42px;
+            color: #014b63;
+            margin-bottom: 40px;
+        }
+
+        .contact-section form {
+            width: 100%;
+            max-width: 600px;     /* same as before */
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-section input,
+        .contact-section textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #014b63;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .contact-section button {
+            padding: 14px;
+            background: #014b63;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            width: 200px; /* adjust as you like */
+            align-self: flex-start; /* keeps it on the left */
+        }
+
+        .contact-section button:hover {
+            background: #026283;
+        }
+        
+        .site-footer {
+    background-color: #014b63; /* dark background */
+    color: white;               
+    text-align: left;
+    padding: 30px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;           /* base font size for email text */
+}
+
+.site-footer p {
+    margin: 40px 0;
+}
+
+.site-footer p:last-child {
+    font-size: 12px;           /* slightly smaller for copyright */
+    color: #f0f0f0;            /* optional: lighter color for subtle effect */
+}
+
+.site-footer a {
+    color: white;              
+    text-decoration: underline; 
+    transition: color 0.3s;
+}
+
+.site-footer a:hover {
+    color: #026283; 
+}
+
+.section-container {
+    width: 90%;
+    max-width: 1200px;  /* same as About Me section */
+    margin: 0 auto;     /* centers content */
+}
+
+
+    </style>
