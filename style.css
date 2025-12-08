@@ -41,6 +41,7 @@ a:hover {
             font-size: 20px;
             font-weight: 600;
             color: #014b63;
+            text-decoration: none;
         }
 
         .nav-links a {
@@ -516,6 +517,7 @@ a:hover {
 
 
     </style>
+
 
 
 
