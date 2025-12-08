@@ -37,7 +37,7 @@ a:hover {
             box-sizing: border-box;
         }
 
-        .logo {
+        .logo a{
             font-size: 20px;
             font-weight: 600;
             color: #014b63;
@@ -52,7 +52,7 @@ a:hover {
         }
 
         .nav-links a:hover {
-            text-decoration: underline;
+            text-decoration: none;
         }
 
         /* --- HERO SECTION --- */
@@ -517,6 +517,7 @@ a:hover {
 
 
     </style>
+
 
 
 
