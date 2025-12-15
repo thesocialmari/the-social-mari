@@ -303,6 +303,72 @@ a:hover {
             background: #026283;
         }
 
+        /* Checkbox container */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #023040;
+    user-select: none;
+}
+
+/* Hide default checkbox */
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Custom checkbox */
+.checkmark {
+    width: 22px;
+    height: 22px;
+    border: 2px solid #014b63;
+    border-radius: 6px;
+    background-color: #f9faf8;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+/* Hover effect */
+.checkbox-container:hover .checkmark {
+    border-color: #026283;
+}
+
+/* Checked state */
+.checkbox-container input:checked ~ .checkmark {
+    background-color: #014b63;
+    border-color: #014b63;
+}
+
+
+.checkmark {
+    position: relative; /* REQUIRED for centering */
+}
+
+/* Checkmark tick */
+.checkmark::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: translate(-50%, -55%) rotate(45deg);
+    top: 50%;
+    left: 50%;
+    display: none;
+}
+
+
+/* Show tick when checked */
+.checkbox-container input:checked ~ .checkmark::after {
+    display: block;
+}
 
 /* --- PAGE HEADER --- */
         .page-header {
@@ -517,6 +583,7 @@ a:hover {
 
 
     </style>
+
 
 
 
