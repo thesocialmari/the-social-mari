@@ -370,6 +370,33 @@ a:hover {
     display: block;
 }
 
+.social-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;      /* size of button container */
+    height: 44px;
+    border-radius: 8px;
+    overflow: hidden;  /* keeps image inside rounded corners */
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.social-btn img {
+    width: 100%;       /* image fills button */
+    height: 100%;
+    object-fit: cover; /* maintain aspect ratio and fill */
+    display: block;
+}
+
+
+
 /* --- PAGE HEADER --- */
         .page-header {
             text-align: center;
@@ -583,6 +610,7 @@ a:hover {
 
 
     </style>
+
 
 
 
