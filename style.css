@@ -570,7 +570,119 @@ a:hover {
       }
     }
 
+/* SOCIAL MEDIA PACKAGES COLUMNS */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  padding: 0;
+  margin-bottom: 20px;
+  column-gap: 30px;
+}
 
+.full-width-section1 {
+  grid-column: 1 / -1;
+  padding: 10px;
+  background-color: #f9faf8;
+  border: 1px solid #eb950e;
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.full-width-section2 {
+  grid-column: 1 / -1;
+  padding: 10px;
+  background-color: #f9faf8;
+  border: 1px solid #eb950e;
+  text-align: center;
+  line-height: 1.5;
+  margin-top: 20px;
+}
+
+.grid-column {
+  padding: 0px;
+  background-color: #f9faf8;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.grid-column.featured {
+  position: relative;
+  transform: translateY(-15px);
+}
+
+/* Visual outline only */
+.grid-column.featured::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  right: -12px;
+  bottom: -12px;
+  border: 2px solid #eb950e;
+  pointer-events: none; /* important */
+  }
+
+
+
+.column-section1 {
+  font-family: 'Chango', cursive;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 1.5px;
+  margin: 0;
+  color: #f9faf8;
+  padding: 15px;
+  background-color: #eb950e;
+}
+
+.column-section2 {
+  padding: 15px;
+  background-color: #fafaf7;
+  border: 1px solid #eb950e;
+  text-align: left;
+  line-height: 1.5;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  flex: 1;
+}
+
+.column-section3 {
+  padding: 15px;
+  background-color: #014b63;
+  border: 1px solid #014b63;
+  text-align: center;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+  color: #f9faf8;
+}
+
+.column-section4 {
+  padding: 15px;
+  background-color: #fafaf7;
+  border: 1px solid #eb950e;
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.pricing-wrapper {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 40px;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
 
   /* --- PAGE FOOTER --- */      
         .site-footer {
@@ -605,11 +717,13 @@ a:hover {
     width: 90%;
     max-width: 1200px;  /* same as About Me section */
     margin: 0 auto;     /* centers content */
+    margin-bottom: 40px;
 }
 
 
 
     </style>
+
 
 
 
